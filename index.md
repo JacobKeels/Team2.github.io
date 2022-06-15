@@ -42,9 +42,12 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 
 <div class="mermaid">
 
-  graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
+graph TD
+  A[User] -->|Makes Request| B(Intercept Request on Azure API)
+  B -->|Forwards Request With Validated API Key| C{API}
+  C -->|Requests Data| D[SQL Server]
+  C -->|Updates Data|D
+  C-->|Adds New Data|D
+  C-->|Returns Data|B
+  B-->|Returns request/status to User|A    
 </div>
