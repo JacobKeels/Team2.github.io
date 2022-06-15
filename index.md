@@ -51,3 +51,13 @@ graph TD
   C-->|Returns Data|B
   B-->|Returns request/status to User|A    
 </div>
+## Mermaid
+<script src="https://unpkg.com/mermaid@9.1.2/dist/mermaid.min.js"></script>
+
+<div class="mermaid">
+
+graph TD
+    A[API] --> B[Key Validation/Routing]
+    B-->|Partial Info, Individual orders|F{Customer}
+    B-->|All Information| C{Admin}
+</div>
