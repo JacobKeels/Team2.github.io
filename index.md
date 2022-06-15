@@ -1,41 +1,23 @@
-## Welcome to GitHub Pages
+# XYZ Corp
 
-You can use the [editor on GitHub](https://github.com/JacobKeels/Team2.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JacobKeels/Team2.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Problem Summary
+* XYZ Corp has existing Azure SQL Server schemas 
+* Trading partners (customers) unable execute actions without direct involvement from XYZ Corp staff
+    * Unnecessary overhead, loss of sales due to sluggish process for clients
+    * User-initiated actions:
+        * Place an order
+        * View order status
+        * Update an order
+        * Search catalog
+        * Get product details
+        * Get product inventory
+* Don’t want to lose or transfer existing database
+    * Prefer to stay within Azure
+*  API must only be accessible by authenticated and authorized users
+    * System must allow API to be disabled/enabled on an ad-hoc basis
+* API calls return different data depending on authorization level
+    * Customers can only view their own orders
+    * Product details and product inventory return data columns based on authorization level
 
 ## Mermaid
 <script src="https://unpkg.com/mermaid@9.1.2/dist/mermaid.min.js"></script>
