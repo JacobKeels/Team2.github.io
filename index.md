@@ -39,9 +39,10 @@
 ### API Authorization
 <div class="mermaid">
 graph TD
-    A[API] --> B[Key Validation/Routing]
-    B-->|Partial Info, Individual orders|F{Customer}
-    B-->|All Information| C{Admin}
+    A[Incoming Request] --> B[Azure API Management]
+    B-->|User Request|D[fa:fa-user Azure Active Directory]
+    D-->|Authenticated Response|B
+    B-->|Authorization Level|C[fa:fa-database Azure SQL Server]
 </div>
 
 * Creation of a set of 6 APIs to manage all customer actions:
