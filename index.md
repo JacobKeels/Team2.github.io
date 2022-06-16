@@ -3,7 +3,6 @@
 # XYZ Corp
 
 ## Problem Summary
-* XYZ Corp has existing Azure SQL Server schemas 
 * Trading partners (customers) unable execute actions without direct involvement from XYZ Corp staff
     * Unnecessary overhead, loss of sales due to sluggish process for clients
     * Customer actions include:
@@ -14,6 +13,7 @@
         * Getting product details
         * Getting product inventory
 * Don’t want to lose or transfer existing database
+    * XYZ Corp has **existing Azure SQL Server schemas**
     * Prefer to stay within Azure
 *  API must only be accessible by authenticated and authorized users
     * System must allow API to be disabled/enabled on an ad-hoc basis
@@ -23,13 +23,13 @@
 
 ## Solution Summary
 * Leverage existing Azure SQL Server schemas 
-* Use [Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis) to handle authentication and authorization 
-    * Transfer existing, on-premise Active Directory management to Azure 
-* Use Azure API Management to handle several key components: 
-    * User authorization via Azure Active Directory 
-    * Ability to enable/disable entire API system 
-    * Ensure proper caching and rate limiting 
-    * Key generation and validation automatically handled by Azure 
+* Use [Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis) to handle authentication and authorization
+    * Transfer existing, on-premise Active Directory management to Azure
+* Use [Azure API Management](https://azure.microsoft.com/en-us/services/api-management/) to handle several key components:
+    * User authorization via Azure Active Directory
+    * Ability to enable/disable entire API system
+    * Ensure proper caching and rate limiting
+    * Key generation and validation automatically handled by Azure
 
 <div class="mermaid">
 graph TD
@@ -38,9 +38,9 @@ graph TD
     B-->|All Information| C{Admin}
 </div>
 
-* Creation of a set of 6 APIs to manage all customer actions: 
+* Creation of a set of 6 APIs to manage all customer actions:
     * Placing an order
-    * Viewing order status 
+    * Viewing order status
     * Updating an order
     * Searching catalog
     * Getting product details
@@ -57,8 +57,8 @@ graph TD
   B-->|Returns request/status to User|A    
 </div>
 
-* API backend written in [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-6.0), [published to Azure API Management](https://docs.microsoft.com/en-us/aspnet/core/tutorials/publish-to-azure-api-management-using-vs?view=aspnetcore-6.0) 
-    * Error returns/Execution success statements 
+* API backend written in [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-6.0), [published to Azure API Management](https://docs.microsoft.com/en-us/aspnet/core/tutorials/publish-to-azure-api-management-using-vs?view=aspnetcore-6.0)
+    * Error returns/Execution success statements
     * Input validation
     * Query parameterization
-* Development and deployment performed using CI/CD pipeline with sandbox testing environment to prevent issues on deployment 
+* Development and deployment performed using CI/CD pipeline with sandbox testing environment to prevent issues on deployment
