@@ -2,6 +2,11 @@
 
 # XYZ Corp
 
+- [Problem Summary](#problem-summary)
+- [Solution Summary](#solution-summary)
+    - [API Authorization Diagram](#api-authorization)
+    - [Request Routing Diagram](#request-routing)
+
 ## Problem Summary
 * Trading partners (customers) unable execute actions without direct involvement from XYZ Corp staff
     * Unnecessary overhead, loss of sales due to sluggish process for clients
@@ -31,6 +36,7 @@
     * Ensure proper caching and rate limiting
     * Key generation and validation automatically handled by Azure
 
+### API Authorization
 <div class="mermaid">
 graph TD
     A[API] --> B[Key Validation/Routing]
@@ -46,6 +52,7 @@ graph TD
     * Getting product details
     * Getting product inventory
 
+### Request Routing
 <div class="mermaid">
 graph TD
   A[User] -->|Makes Request| B(Intercept Request on Azure API)
