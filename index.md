@@ -37,13 +37,7 @@
     * Searching catalog
     * Getting product details
     * Getting product inventory
-* API backend written in [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-6.0), [published to Azure API Management](https://docs.microsoft.com/en-us/aspnet/core/tutorials/publish-to-azure-api-management-using-vs?view=aspnetcore-6.0) 
-    * Error returns/Execution success statements 
-    * Input validation
-    * Query parameterization
-* Development and deployment performed using CI/CD pipeline with sandbox testing environment to prevent issues on deployment 
 
-## Mermaid
 <div class="mermaid">
 graph TD
   A[User] -->|Makes Request| B(Intercept Request on Azure API)
@@ -54,6 +48,12 @@ graph TD
   C-->|Returns Data|B
   B-->|Returns request/status to User|A    
 </div>
+
+* API backend written in [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-6.0), [published to Azure API Management](https://docs.microsoft.com/en-us/aspnet/core/tutorials/publish-to-azure-api-management-using-vs?view=aspnetcore-6.0) 
+    * Error returns/Execution success statements 
+    * Input validation
+    * Query parameterization
+* Development and deployment performed using CI/CD pipeline with sandbox testing environment to prevent issues on deployment 
 
 ## Mermaid
 <div class="mermaid">
