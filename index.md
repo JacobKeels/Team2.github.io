@@ -7,12 +7,12 @@
 * Trading partners (customers) unable execute actions without direct involvement from XYZ Corp staff
     * Unnecessary overhead, loss of sales due to sluggish process for clients
     * Customer actions include:
-        * Place an order
-        * View order status
-        * Update an order
-        * Search catalog
-        * Get product details
-        * Get product inventory
+        * Placing an order
+        * Viewing order status
+        * Updating an order
+        * Searching catalog
+        * Getting product details
+        * Getting product inventory
 * Don’t want to lose or transfer existing database
     * Prefer to stay within Azure
 *  API must only be accessible by authenticated and authorized users
