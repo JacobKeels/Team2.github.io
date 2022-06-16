@@ -30,6 +30,14 @@
     * Ability to enable/disable entire API system 
     * Ensure proper caching and rate limiting 
     * Key generation and validation automatically handled by Azure 
+
+<div class="mermaid">
+graph TD
+    A[API] --> B[Key Validation/Routing]
+    B-->|Partial Info, Individual orders|F{Customer}
+    B-->|All Information| C{Admin}
+</div>
+
 * Creation of a set of 6 APIs to manage all customer actions: 
     * Placing an order
     * Viewing order status 
@@ -54,11 +62,3 @@ graph TD
     * Input validation
     * Query parameterization
 * Development and deployment performed using CI/CD pipeline with sandbox testing environment to prevent issues on deployment 
-
-## Mermaid
-<div class="mermaid">
-graph TD
-    A[API] --> B[Key Validation/Routing]
-    B-->|Partial Info, Individual orders|F{Customer}
-    B-->|All Information| C{Admin}
-</div>
