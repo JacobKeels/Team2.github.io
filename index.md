@@ -73,6 +73,7 @@ graph TD
 
 ## Technologies Used
 This website was built using the following technologies
+- [Git](https://git-scm.com)
 - [Jekyll](https://github.com/jekyll/jekyll)
 - [Github Pages](https://pages.github.com)
 - [CI/CD](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll)
