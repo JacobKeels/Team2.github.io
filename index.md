@@ -72,6 +72,7 @@ graph TD
 * Development and deployment performed using CI/CD pipeline with sandbox testing environment to prevent issues on deployment
 
 ## Technologies Used
+This website was built using the following technologies
 - [Jekyll](https://github.com/jekyll/jekyll)
 - [Github Pages](https://pages.github.com)
 - [CI/CD](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll)
