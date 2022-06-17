@@ -7,6 +7,9 @@
     - [API Authorization Diagram](#api-authorization-overview)
     - [Request Routing Diagram](#request-routing)
 
+- [Technologies Used](#technologies-used)
+- [Team 2 Consulting](#team-2-consulting)
+
 ## Problem Summary
 * Trading partners (customers) unable execute actions without direct involvement from XYZ Corp staff
     * Unnecessary overhead, loss of sales due to sluggish process for clients
@@ -78,3 +81,9 @@ This website was built using the following technologies
 - [Github Pages](https://pages.github.com)
 - [CI/CD](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll)
 - [Mermaid](https://mermaid-js.github.io/mermaid/)
+
+## Team 2 Consulting
+- David Adarkwah
+- Nathan Adrian
+- Jacob Keels
+- Alexander Stone
