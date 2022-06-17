@@ -4,7 +4,7 @@
 
 - [Problem Summary](#problem-summary)
 - [Solution Summary](#solution-summary)
-    - [API Authorization Diagram](#api-authorization)
+    - [API Authorization Diagram](#api-authorization-overview)
     - [Request Routing Diagram](#request-routing)
 
 ## Problem Summary
@@ -36,11 +36,11 @@
     * Ensure proper caching and rate limiting
     * Key generation and validation automatically handled by Azure
 
-### API Authorization
+### API Authorization Overview
 <div class="mermaid">
 graph TD
     A[Incoming Request] --> B[Azure API Management]
-    B-->|User Request|D[fa:fa-user Azure Active Directory]
+    B-->D[fa:fa-user Azure Active Directory]
     D-->|Authenticated Response|B
     B-->|Authorization Level|C[fa:fa-database Azure SQL Server]
 </div>
