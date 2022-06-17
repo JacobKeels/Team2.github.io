@@ -1,6 +1,6 @@
 <script src="https://unpkg.com/mermaid@9.1.2/dist/mermaid.min.js"></script>
 
-# XYZ Corp
+# Team 2 Consulting proposed solution for XYZ Corp
 
 - [Problem Summary](#problem-summary)
 - [Solution Summary](#solution-summary)
