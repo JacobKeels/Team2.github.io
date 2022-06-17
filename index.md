@@ -70,3 +70,9 @@ graph TD
     * Input validation
     * Query parameterization
 * Development and deployment performed using CI/CD pipeline with sandbox testing environment to prevent issues on deployment
+
+## Technologies Used
+- [Jekyll](https://github.com/jekyll/jekyll)
+- [Github Pages](https://pages.github.com)
+- [CI/CD](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll)
+- [Mermaid](https://mermaid-js.github.io/mermaid/)
